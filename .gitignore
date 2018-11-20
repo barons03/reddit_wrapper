@@ -32,4 +32,4 @@ reddit_wrapper-*.tar
 !.vscode/launch.json
 !.vscode/extensions.json
 
-.elixir_ls/
+.elixir_ls/*
