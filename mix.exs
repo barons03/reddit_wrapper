@@ -45,9 +45,6 @@ defmodule RedditWrapper.MixProject do
       {:httpoison, "~> 1.4"},
       # JSON Support
       {:jason, "~> 1.1"},
-      # Validation support
-      {:vex, "~> 0.8.0"},
-      {:exconstructor, "~> 1.1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
