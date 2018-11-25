@@ -1,4 +1,8 @@
 defmodule RedditWrapper.Common.BodyFormatter do
+  def get_body(%HTTPoison.Response{} = response) do
+    response.body
+  end
+
   def format_data(body) do
     body.data
   end
@@ -15,7 +19,7 @@ defmodule RedditWrapper.Common.BodyFormatter do
   end
 
   def data_to_struct(data, struct, :single) when is_map(data) do
-    Map.merge(struct, data)
+    struct(struct, data)
   end
 
   def data_to_struct(data, struct, :list) do
