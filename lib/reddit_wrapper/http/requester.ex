@@ -8,15 +8,22 @@ defmodule RedditWrapper.Http.Requester do
           200 ->
             case response.body do
               {:ok, json_data} ->
-                response = response
-                |> Map.put(:body, json_data)
+                response =
+                  response
+                  |> Map.put(:body, json_data)
+
                 {:ok, response}
-              {:error, error} -> {:error, error}
+
+              {:error, error} ->
+                {:error, error}
             end
+
           _ ->
             {:error, response}
         end
-      {:error, error} -> {:error, error}
+
+      {:error, error} ->
+        {:error, error}
     end
   end
 

@@ -13,7 +13,7 @@ defmodule RedditWrapper.Common.BodyFormatter do
 
   def format_children_data(body) do
     format_children(body)
-    |> Enum.map(fn(children) ->
+    |> Enum.map(fn children ->
       format_data(children)
     end)
   end
@@ -24,7 +24,7 @@ defmodule RedditWrapper.Common.BodyFormatter do
 
   def data_to_struct(data, struct, :list) do
     data
-    |> Enum.map(fn(child) ->
+    |> Enum.map(fn child ->
       data_to_struct(child, struct, :single)
     end)
   end
