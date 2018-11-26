@@ -12,4 +12,5 @@ defmodule RedditWrapper.Subreddits do
     Requester.request("/subreddits/popular.json", :get, params)
     |> DataHandler.handle(Subreddit, :list)
   end
+
 end
